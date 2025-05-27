@@ -25,21 +25,25 @@ Este proyecto analiza la composición y asistencia legislativa en la **Legislatu
 
 ---
 
-# 🛠️ Proceso de Trabajo
+# ⚙️ Proceso ETL (Extracción, Transformación y Carga):
+Este proyecto me permitió aplicar todo el flujo completo de trabajo de datos:
 
 ## 1. **Limpieza de Datos con Power Query**
-- Se reemplazan valores inconsistentes.
+- Se detectaron y reemplazan valores inconsistentes/erróneos.
 - Se crea una columna personalizada para fechas, manejando valores `null` si no hay información registrada.
--
+- Perfilado de valores.
+- Limpieza de columnas inconsistentes
+
 ## 2. **Relación entre Tablas**
 Se relacionan las tablas dim_Legisladores y fact_Asistencias a través del campo DNI.
 
-## 3. **Modelo Dimensional**
+## 3. **Modelo Dimensional Básico**
 Se construye un modelo de datos tipo estrella:
 Tabla de hechos: fact_Asistencias
 Tabla de dimensión: dim_Legisladores
 
 Se renombran campos para mejorar la comprensión y consistencia del modelo.
+
 ## 4. **Transformación de Datos**
 En la tabla fact_asistencias2025, se aplica la función desagrupar columnas para transformar sesiones (columnas) en filas, permitiendo análisis por fecha y tipo de sesión.
 
@@ -50,7 +54,7 @@ En la tabla fact_asistencias2025, se aplica la función desagrupar columnas para
 -Asistencia por bloque y legislador/a
 -Filtros por tipo de sesión (Presente, Ausente, **NA > Campo Vacio en BD Original** y fecha)
 
-📘 Glosario
+📘 Glosario:
 Bloque:
 Grupo de tres (3) o más Legisladores organizados por afinidad política. En caso de partidos o alianzas con un solo representante, pueden igualmente actuar como bloque.
 
