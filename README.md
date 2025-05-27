@@ -52,6 +52,7 @@ En la tabla `fact_asistencias2025`, se aplicó la función **desagrupar columnas
 
 
 📘 Glosario:
+
 Bloque:
 Grupo de tres (3) o más Legisladores organizados por afinidad política. En caso de partidos o alianzas con un solo representante, pueden igualmente actuar como bloque.
 
