@@ -4,13 +4,13 @@ Este proyecto analiza la composición y asistencia legislativa en la **Legislatu
 
 > ⚠️ Toda la información fue tomada con fines educativos y de práctica personal. La misma se encuentra disponible públicamente en la [página oficial de la Legislatura](https://legislaturacba.gob.ar/) y su [Portal de Datos Abiertos](https://legislaturacba.gob.ar/portal-de-datos-abiertos/).
 
----
+
+
 
 ## 📅 Período Analizado
 
 **18 de diciembre de 2024** al **30 de abril de 2025**
 
----
 
 ## 🗂️ Fuentes de Datos
 
@@ -23,36 +23,33 @@ Este proyecto analiza la composición y asistencia legislativa en la **Legislatu
 - **Asistencia a Sesiones Legislativas**  
   Registro de asistencias individuales por bloque y legislador/a en cada sesión del año.
 
----
 
-# ⚙️ Proceso ETL (Extracción, Transformación y Carga):
-Este proyecto me permitió aplicar todo el flujo completo de trabajo de datos:
+## 🛠️ Proceso de Trabajo
 
-## 1. **Limpieza de Datos con Power Query**
-- Se detectaron y reemplazan valores inconsistentes/erróneos.
-- Se crea una columna personalizada para fechas, manejando valores `null` si no hay información registrada.
-- Perfilado de valores.
-- Limpieza de columnas inconsistentes
+### 1. **Limpieza de Datos con Power Query**
+- Se detectaron y reemplazaron valores inconsistentes o erróneos.
+- Se creó una columna personalizada para fechas, contemplando valores `null` en los casos sin información registrada.
+- Se realizó un perfilado de valores para identificar patrones y outliers.
+- Se limpiaron columnas con formatos o registros inconsistentes.
 
-## 2. **Relación entre Tablas**
-Se relacionan las tablas dim_Legisladores y fact_Asistencias a través del campo DNI.
+### 2. **Modelo Dimensional Básico**
+Se construyó un modelo de datos tipo estrella, relacionando las tablas `dim_Legisladores` y `fact_Asistencias` a través del campo **DNI**.
 
-## 3. **Modelo Dimensional Básico**
-Se construye un modelo de datos tipo estrella:
-Tabla de hechos: fact_Asistencias
-Tabla de dimensión: dim_Legisladores
+- **Tabla de hechos:** `fact_Asistencias`  
+- **Tabla de dimensión:** `dim_Legisladores`
 
-Se renombran campos para mejorar la comprensión y consistencia del modelo.
+Además, se renombran campos para mejorar la comprensión semántica y mantener consistencia en el modelo.
 
-## 4. **Transformación de Datos**
-En la tabla fact_asistencias2025, se aplica la función desagrupar columnas para transformar sesiones (columnas) en filas, permitiendo análisis por fecha y tipo de sesión.
+### 3. **Transformación de Datos**
+En la tabla `fact_asistencias2025`, se aplicó la función **desagrupar columnas (unpivot)** para transformar los registros de sesiones (originalmente columnas) en filas. Esto permite un análisis más flexible por **fecha** y **tipo de sesión**.
 
-## 5. **Principales Visualizaciones en Power BI**
--Composición por bloque político
--Distribución por género
--Evolución histórica de la representación femenina y masculina
--Asistencia por bloque y legislador/a
--Filtros por tipo de sesión (Presente, Ausente, **NA > Campo Vacio en BD Original** y fecha)
+### 4. **Principales Visualizaciones en Power BI**
+- Composición de la Cámara por bloque político
+- Distribución de legisladores/as por género
+- Evolución histórica de la representación femenina y masculina
+- Asistencia a sesiones, segmentada por bloque y por legislador/a
+- Filtros dinámicos por tipo de sesión (Presente, Ausente, **NA → campo vacío en la base de datos original**) y por fecha
+
 
 📘 Glosario:
 Bloque:
