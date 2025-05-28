@@ -1,4 +1,4 @@
-# 📑 Análisis Legislativo 2025
+# 📑 Análisis Cámara Legislativa 2025
 
 Este informe presenta una lectura analítica de la [visualización dinámica en Power BI (.pbix)](https://github.com/cpereyra-bi/CamLegisladores2025/blob/main/InformeBD_Legislatura.pbix)— con foco en la **composición política**, la **distribución de género** y el **nivel de asistencia legislativa** en la Legislatura Provincial de Córdoba al 30 de abril de 2025.
 
@@ -28,10 +28,9 @@ Se observa una evolución positiva en la representación de mujeres en la Legisl
 
 - **1990**: 3 legisladoras
 - **2000**: 23 legisladoras
-- **2010**: 30+ legisladoras
-- **2020**: ~40 legisladoras
+- **2020**: +30 legisladoras
 
-📈 **Tendencia**: Aumento sostenido de la participación femenina, reflejando políticas de equidad y paridad de género a nivel institucional.
+📈 **Tendencia**: Aumento sostenido de la participación femenina, reflejando políticas de equidad y paridad de género a nivel institucional. 
 
 ---
 
@@ -67,18 +66,10 @@ Se observa una evolución positiva en la representación de mujeres en la Legisl
 - 🔹 **Asistencia alta**, aunque con casos puntuales de inasistencia y datos no asignados.
 - 🔹 **Acceso a datos legislativos** como herramienta de transparencia ciudadana.
 
----
-
-## 📂 Datos Fuente
-
-Archivo: `Proyecto_CAMARA2025.pdf`  
-Fecha de corte del informe: **30 de abril de 2025**
 
 ---
 
 ### ✍️ Autora del análisis
 
 **Camila Pereyra**  
-[Lic. en Marketing | Data Analyst | Apasionada por la transparencia y la innovación pública]  
-📍 San Martín de los Andes – 🇦🇷  
 🌐 GitHub: [github.com/cpereyra-bi](https://github.com/cpereyra-bi)
